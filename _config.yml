@@ -15,8 +15,8 @@ sass:
 
 permalink: /posts/:title/
 texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
+  title: Filippo Veggo
+  tagline: Developer. Designer. Giocatore di biliardo multiplayer.
   date_format: "%b %-d, %Y"
   style: black
   showNav: false
