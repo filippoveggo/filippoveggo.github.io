@@ -16,7 +16,7 @@ sass:
 permalink: /posts/:title/
 texture:
   title: Filippo Veggo
-  tagline: Developer. Designer. Giocatore di biliardo multiplayer.
+  tagline: Developer. Designer. 
   date_format: "%b %-d, %Y"
   style: black
   showNav: false
