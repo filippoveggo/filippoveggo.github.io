@@ -1,4 +1,5 @@
 ---
+hidden: true
 layout: post
 title:  "Coding Post"
 description: An example post which shows code rendering.
