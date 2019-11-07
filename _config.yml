@@ -2,9 +2,7 @@ title: Filippo Veggo | Personal website
 author: Filippo Veggo
 email: filippoveggo@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Personal Website
 show_excerpts: true # set to true to show excerpts on the homepage
 baseurl: /
 
@@ -26,6 +24,7 @@ texture:
   social_links:
     github:  filippoveggo
     mail: filippoveggo@gmail.com
+    instagram: filippoveggo
  
 
 # If you want to link only specific pages in your header, uncomment
