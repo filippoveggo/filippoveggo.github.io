@@ -6,7 +6,8 @@ date:   2019-12-01 +0530
 categories: Dart Flutter
 ---
 
-App registro elettronico con API di classeviva
+Flutter client for electronic register data management (Classeviva),
+I'm the designer of most of the pages of this application
 
 2019/2020 ITIS C. Zuccante
 
