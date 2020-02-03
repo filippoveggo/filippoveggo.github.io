@@ -9,9 +9,9 @@ categories: Dart Flutter
 Flutter client for electronic register data management (Classeviva),
 I'm the designer of most of the pages of this application
 
-2019/2020 ITIS C. Zuccante
+2019/2020 ITIS C. Zuccante - Corso Web Application
 
-<div align="center"><img src="https://camo.githubusercontent.com/ea89952bde146730d8ff57497c22cceebc7be1d1/68747470733a2f2f692e696d6775722e636f6d2f5457366154634d2e706e67"></div>
+<div align="center"><img src="https://camo.githubusercontent.com/406807b4f177dc26a8c1d64a07dae984cabdd66e/68747470733a2f2f692e696d6775722e636f6d2f6a3335394873652e6a7067"></div>
 
 Link to GitHub project [here][Link-GitHub].
 
