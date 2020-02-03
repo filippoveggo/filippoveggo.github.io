@@ -8,10 +8,11 @@ categories: HTML CSS Javascript JQuery
 
 Sito web fatto per il progetto 'STEM' anno scolastico 2017/2018 da Riccardo Calligaro e Filippo Veggo.
 
-2017/2018 Istituto Zuccante
-
 <div align="center"><img src="https://i.imgur.com/fyuKV43.png"></div>
 
 Link to GitHub project [here][Link-GitHub].
 
 [Link-GitHub]: https://github.com/filippoveggo/ProgettoSitoStem
+
+2017/2018 Istituto Zuccante
+
