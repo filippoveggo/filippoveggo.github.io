@@ -1,11 +1,11 @@
 ---
 layout: about
-title:  Filippo Veggo | About
-headTitle: About
+title:  Filippo Veggo | About 
+headTitle: About me
 permalink: /about
 ---
 
-Student at ITIS "C. Zuccante" in Mestre, 17.
+Student at ITIS "C. Zuccante" in Mestre, 17. <br>
 Focused on graphic design.
 
 Skills
