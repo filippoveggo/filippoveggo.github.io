@@ -6,7 +6,7 @@ permalink: /about
 ---
 
 Student at ITIS "C. Zuccante" in Mestre, 17. <br>
-Focused on graphic design.
+Focused on graphic & UI/UX design.
 
 Skills
 
@@ -17,11 +17,13 @@ Skills
 - CSS 
 - Css Frameworks (Bootstrap)
 - Git
-- Flutter & Dart (Beginner)
+- Flutter & Dart
 - C ++ (Beginner)
-
+- PHP
+  
 Projects
 
 - [Flutter client for Classeviva](https://github.com/Zuccante-Web-App/Registro-elettronico)
 - [Website for a school project](https://github.com/filippoveggo/ProgettoSitoStem)
+- Other projects is private due to copyrigth
   
