@@ -14,6 +14,9 @@ logo: /assets/logo_ico.ico
 # SEO 
 google_site_verification: 14rO7FUvXFicIUOFnCE2FoOow5rWcdViLUyxcFc6_kM
 
+sitemap: 
+  filename: "/sitemap.xml"
+
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
@@ -43,4 +46,5 @@ header_pages:
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 #  - jekyll-feed
