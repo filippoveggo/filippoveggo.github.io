@@ -2,9 +2,17 @@ title: Filippo Veggo | Personal website
 author: Filippo Veggo
 email: filippoveggo@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Personal Website
+  This is a website to contain all the projects, open source or not, of filippo veggo
 show_excerpts: true # set to true to show excerpts on the homepage
 baseurl: /
+url: https://filippoveggo.github.io/
+
+tagline: A website for all my projects
+
+logo: /assets/LogoFV.png
+
+# SEO 
+google_site_verification: 14rO7FUvXFicIUOFnCE2FoOow5rWcdViLUyxcFc6_kM
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -14,7 +22,7 @@ sass:
 permalink: /posts/:title/
 texture:
   title: Filippo Veggo
-  tagline: Developer. Designer. 
+  tagline: Developer. Designer.
   date_format: "%b %-d, %Y"
   style: black
   showNav: true
@@ -22,9 +30,8 @@ texture:
 
   # generate social links in footer
   social_links:
-    github:  filippoveggo
+    github: filippoveggo
     mail: filippoveggo@gmail.com
- 
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
