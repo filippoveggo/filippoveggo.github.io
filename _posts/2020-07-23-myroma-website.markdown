@@ -11,12 +11,12 @@ Creation of the website for [MyRoma](https://www.myroma-app.com/), an app that g
 ----
 
 Home Page:
-<div align="center"><img src="https://i.imgur.com/qIjNq5W.png"></div>
+<div align="center"><img src="https://i.imgur.com/qIjNq5W.png" alt="Home page del sito MyRoma"></div>
 
 ----
 
 Monuments Page: 
-<div align="center"><img src="https://i.imgur.com/Mg31A93.png"></div>
+<div align="center"><img src="https://i.imgur.com/Mg31A93.png" alt="Monuments page del sito MyRoma"></div>
 
 ----
 

@@ -8,7 +8,7 @@ categories: HTML CSS Javascript JQuery
 
 Sito web fatto per il progetto 'STEM' anno scolastico 2017/2018 da Riccardo Calligaro e Filippo Veggo.
 
-<div align="center"><img src="https://i.imgur.com/fyuKV43.png"></div>
+<div align="center"><img src="https://i.imgur.com/fyuKV43.png" alt="Home page del sito stem"></div>
 
 Link to GitHub project [here][Link-GitHub].
 
