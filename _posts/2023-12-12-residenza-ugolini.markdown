@@ -17,8 +17,8 @@ Link to the website [here][Link-ResidenzaUgolini].
 
 Home Page:
 
-<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/HomaPage.png" alt="Home page Residenza Ugolini"></div>
-<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/HomaPage2.png" alt="Home page Residenza Ugolini pt. 2"></div>
+<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/HomePage.png" alt="Home page Residenza Ugolini"></div>
+<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/HomePage2.png" alt="Home page Residenza Ugolini pt. 2"></div>
 
 ----
 
