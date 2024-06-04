@@ -17,18 +17,18 @@ Link to the website [here][Link-ResidenzaUgolini].
 
 Home Page:
 
-<div align="center"><img src="https://imgur.com/a/ZHyGeUd" alt="Home page Residenza Ugolini"></div>
-<div align="center"><img src="https://imgur.com/a/3k89KqU" alt="Home page Residenza Ugolini pt. 2"></div>
+<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/HomaPage.png" alt="Home page Residenza Ugolini"></div>
+<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/HomaPage2.png" alt="Home page Residenza Ugolini pt. 2"></div>
 
 ----
 
 Apartment Page: 
-<div align="center"><img src="https://imgur.com/a/loqah8b" alt="Apartment page"></div>
+<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/ApartmentPage.png" alt="Apartment page"></div>
 
 ----
 
 Contacts Page: 
-<div align="center"><img src="https://imgur.com/a/alw1HDX" alt="Contacts page"></div>
+<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/ContactsPage.png" alt="Contacts page"></div>
 
 ----
 
