@@ -2,26 +2,197 @@
 <html lang="en">
 
 <head>
-    {%- include head.html -%}
+  {%- include head.html -%}
 </head>
 
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWVK2CB" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header class="texture-{{ site.texture.style }}">
-        <div class="container">
-            {%- include nav.html -%}
-        </div>
-        {%- include about_header.html -%}
-    </header>
-    <main>
-        <div class="container">
-            {{ content }}
-        </div>
-    </main>
-    {%- include footer.html -%}
+<body class="apple-liquid-glass-theme about-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWVK2CB" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  {%- include nav.html -%}
+
+  <header class="site-header">
+    {%- include about_header.html -%}
+  </header>
+
+  <main class="site-main">
+    <div class="main-container about-content-container">
+      <div class="about-grid">
+        <!-- Profile & Background Card -->
+        <section class="glass-card about-card about-intro-card">
+          <div class="glass-sheen" aria-hidden="true"></div>
+          <div class="about-card-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Background</span>
+          </div>
+          <h2 class="about-card-title">Who I Am</h2>
+          <p class="about-intro-text">
+            Student at <strong>ITIS "C. Zuccante"</strong> in Mestre (Venice, Italy). Passionate about combining software engineering and elegant visual aesthetics to create intuitive, human-centered digital experiences.
+          </p>
+          <p class="about-intro-text">
+            Deeply focused on <strong>UI/UX design</strong>, modern front-end web development, and mobile app design with Flutter. Inspired by Apple's Human Interface Guidelines and modern glassmorphic interface paradigms.
+          </p>
+          <div class="about-highlights-pills">
+            <span class="highlight-chip"><i class="fa-solid fa-code"></i> Front-End Architecture</span>
+            <span class="highlight-chip"><i class="fa-solid fa-palette"></i> Apple Liquid Glass UI</span>
+            <span class="highlight-chip"><i class="fa-brands fa-flutter"></i> Flutter & Mobile</span>
+            <span class="highlight-chip"><i class="fa-solid fa-mobile-screen"></i> Responsive Systems</span>
+          </div>
+        </section>
+
+        <!-- Skills Category Matrix -->
+        <section class="glass-card about-card about-skills-card">
+          <div class="glass-sheen" aria-hidden="true"></div>
+          <div class="about-card-badge">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Technical Arsenal</span>
+          </div>
+          <h2 class="about-card-title">Skills & Technologies</h2>
+          
+          <div class="skills-subgrid">
+            <!-- Front-End & Web -->
+            <div class="skill-category-panel">
+              <div class="skill-cat-header">
+                <div class="cat-icon-badge web-icon">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 class="cat-title">Web & Front-End</h3>
+              </div>
+              <div class="skills-tags-wrap">
+                <span class="skill-pill">HTML5</span>
+                <span class="skill-pill">CSS3 / SCSS</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">jQuery</span>
+                <span class="skill-pill">Bootstrap</span>
+                <span class="skill-pill">Responsive Design</span>
+              </div>
+            </div>
+
+            <!-- Mobile Engineering -->
+            <div class="skill-category-panel">
+              <div class="skill-cat-header">
+                <div class="cat-icon-badge mobile-icon">
+                  <i class="fa-brands fa-flutter"></i>
+                </div>
+                <h3 class="cat-title">Mobile Development</h3>
+              </div>
+              <div class="skills-tags-wrap">
+                <span class="skill-pill">Flutter</span>
+                <span class="skill-pill">Dart</span>
+                <span class="skill-pill">Cross-Platform UI</span>
+                <span class="skill-pill">Mobile Prototyping</span>
+              </div>
+            </div>
+
+            <!-- Languages & Tools -->
+            <div class="skill-category-panel">
+              <div class="skill-cat-header">
+                <div class="cat-icon-badge backend-icon">
+                  <i class="fa-solid fa-terminal"></i>
+                </div>
+                <h3 class="cat-title">Languages & Systems</h3>
+              </div>
+              <div class="skills-tags-wrap">
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">PHP</span>
+                <span class="skill-pill">C++ (Beginner)</span>
+                <span class="skill-pill">JSON</span>
+                <span class="skill-pill">Git & GitHub</span>
+              </div>
+            </div>
+
+            <!-- UI/UX & Design -->
+            <div class="skill-category-panel">
+              <div class="skill-cat-header">
+                <div class="cat-icon-badge design-icon">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3 class="cat-title">UI / UX Design</h3>
+              </div>
+              <div class="skills-tags-wrap">
+                <span class="skill-pill">Liquid Glass / VisionOS</span>
+                <span class="skill-pill">Wireframing</span>
+                <span class="skill-pill">Visual Hierarchy</span>
+                <span class="skill-pill">Apple HIG</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Key Open-Source Projects Card -->
+        <section class="glass-card about-card about-projects-card">
+          <div class="glass-sheen" aria-hidden="true"></div>
+          <div class="about-card-badge">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Open Source & Projects</span>
+          </div>
+          <h2 class="about-card-title">Featured Highlights</h2>
+
+          <div class="featured-list-grid">
+            <a href="https://github.com/Zuccante-Web-App/Registro-elettronico" target="_blank" rel="noopener noreferrer" class="featured-item-glass">
+              <div class="item-icon-box">
+                <i class="fa-brands fa-flutter"></i>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">Flutter Client for Classeviva</h4>
+                <p class="item-desc">Comprehensive mobile client for Italian electronic school register data management. UI/UX design and core screens.</p>
+              </div>
+              <span class="item-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <a href="https://github.com/filippoveggo/ProgettoSitoStem" target="_blank" rel="noopener noreferrer" class="featured-item-glass">
+              <div class="item-icon-box">
+                <i class="fa-solid fa-flask"></i>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">STEM Educational Website</h4>
+                <p class="item-desc">High school web project showcasing scientific and technological concepts through an interactive interface.</p>
+              </div>
+              <span class="item-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+          </div>
+
+          <div class="disclaimer-glass-notice">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Several commercial projects (including Residenza Ugolini, MyRoma, and Artivism) are private or proprietary third-party developments. See the <a href="{{ "/" | relative_url }}">case studies on the homepage</a> for visual previews and details.</span>
+          </div>
+        </section>
+
+        <!-- Connect & Contact Glass Card -->
+        <section class="glass-card about-card about-cta-card">
+          <div class="glass-sheen" aria-hidden="true"></div>
+          <div class="cta-inner">
+            <div class="cta-badge">
+              <span class="status-dot"></span>
+              <span>Get in Touch</span>
+            </div>
+            <h2 class="cta-title">Let’s collaborate on something great.</h2>
+            <p class="cta-text">
+              Have a project idea, front-end design challenge, or internship opportunity? Feel free to reach out anytime.
+            </p>
+            <div class="cta-buttons">
+              <a href="mailto:{{ site.texture.social_links.mail | default: site.email }}" class="glass-btn glass-btn-primary">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Send an Email</span>
+              </a>
+              {%- if site.texture.social_links.github -%}
+              <a href="https://github.com/{{ site.texture.social_links.github }}" target="_blank" rel="noopener noreferrer" class="glass-btn glass-btn-secondary">
+                <i class="fa-brands fa-github"></i>
+                <span>View GitHub</span>
+              </a>
+              {%- endif -%}
+            </div>
+          </div>
+        </section>
+
+        {{ content }}
+      </div>
+    </div>
+  </main>
+
+  {%- include footer.html -%}
 </body>
 
 </html>

@@ -1,26 +1,55 @@
-<div class="container">
-	<h1>{{ site.texture.title }}</h1>
-	<h2>{{ site.texture.tagline }}</h2>
-	<ul class="social">
-		{%- if site.texture.social_links.github -%}
-		<a href="https://github.com/{{ site.texture.social_links.github }}">
-			<li><i class="icon-github-circled"></i></li>
-		</a>
-		{%- endif -%}
-		{%- if site.texture.social_links.linkedIn -%}
-		<a href="https://linkedin.com/{{ site.texture.social_links.linkedIn }}">
-			<li><i class="icon-linkedin-squared"></i></li>
-		</a>
-		{%- endif -%}
-		{%- if site.texture.social_links.twitter -%}
-		<a href="https://twitter.com/{{ site.texture.social_links.twitter }}">
-			<li><i class="icon-twitter-squared"></i></li>
-		</a>
-		{%- endif -%}
+<div class="hero-section">
+  <div class="hero-glass-panel">
+    <!-- Status Pill -->
+    <div class="hero-status-badge">
+      <span class="status-dot"></span>
+      <span class="status-text">Available for UI/UX & Web Development</span>
+    </div>
 
-		{%- if site.texture.social_links.mail -%}
-		<a href="mailto:{{ site.texture.social_links.mail }}"><li><i class="font-awesome-icon fas fa-envelope"></i></li></a>
-		{%- endif -%}
+    <!-- Title with Apple gradient -->
+    <h1 class="hero-title">{{ site.texture.title }}</h1>
+    
+    <!-- Tagline & Bio description -->
+    <p class="hero-tagline">
+      Front-End Developer & UI/UX Designer crafting sleek web platforms, responsive experiences, and mobile apps with Apple-grade polish.
+    </p>
 
-	</ul>
+    <!-- Call to Actions -->
+    <div class="hero-actions">
+      <a href="#projects" class="glass-btn glass-btn-primary">
+        <i class="fa-solid fa-arrow-down-long"></i>
+        <span>Explore Work</span>
+      </a>
+      <a href="{{ "/about" | relative_url }}" class="glass-btn glass-btn-secondary">
+        <i class="fa-regular fa-user"></i>
+        <span>About Me</span>
+      </a>
+      {%- if site.texture.social_links.mail -%}
+      <a href="mailto:{{ site.texture.social_links.mail }}" class="glass-btn glass-btn-secondary">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Get in Touch</span>
+      </a>
+      {%- endif -%}
+    </div>
+
+    <!-- Social Glass Bar -->
+    <div class="hero-social-bar">
+      <span class="social-label">Connect:</span>
+      <div class="social-pills">
+        {%- if site.texture.social_links.github -%}
+        <a href="https://github.com/{{ site.texture.social_links.github }}" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        {%- endif -%}
+
+        {%- if site.texture.social_links.mail -%}
+        <a href="mailto:{{ site.texture.social_links.mail }}" class="social-pill" aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
+          <span>{{ site.texture.social_links.mail }}</span>
+        </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
 </div>

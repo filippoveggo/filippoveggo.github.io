@@ -1,24 +1,71 @@
 ---
 layout: page
 ---
-{%- if site.posts.size > 0 -%}
-<ul class="posts">
-	{%- for post in site.posts -%}
-	<li>
-		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-		<div class="post-meta">
-			<a class="post-link" href="{{ post.url | relative_url }}">
-				<h2 class="post-title">{{ post.title | escape }}</h2>
-			</a>
-			<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
-		</div>
-		<div class="post">
-			{%- if site.show_excerpts -%}
-			{{ post.excerpt }}
-			{%- endif -%}
-		</div>
-	</li>
-	{%- endfor -%}
-</ul>
-{%- endif -%}
 
+{%- if site.posts.size > 0 -%}
+<section class="projects-section" id="projects" aria-labelledby="projects-heading">
+  <div class="section-header">
+    <div class="section-title-wrap">
+      <div class="section-eyebrow">
+        <i class="fa-solid fa-sparkles"></i>
+        <span>Portfolio</span>
+      </div>
+      <h2 id="projects-heading" class="section-title">Selected Projects & Work</h2>
+      <p class="section-subtitle">A collection of web applications, mobile user interfaces, and client projects built with modern technologies.</p>
+    </div>
+    <div class="projects-counter-pill">
+      <span class="counter-number">{{ site.posts.size }}</span>
+      <span class="counter-label">Projects</span>
+    </div>
+  </div>
+
+  <div class="projects-grid">
+    {%- for post in site.posts -%}
+    <article class="glass-card project-card" data-tilt>
+      <div class="glass-sheen" aria-hidden="true"></div>
+      
+      <div class="project-card-header">
+        <div class="project-tags-list">
+          {%- if post.categories.size > 0 -%}
+            {%- for tag in post.categories -%}
+              <span class="project-tag-pill">{{ tag }}</span>
+            {%- endfor -%}
+          {%- else -%}
+            <span class="project-tag-pill">Project</span>
+          {%- endif -%}
+        </div>
+        <time class="project-date" datetime="{{ post.date | date_to_xmlschema }}">
+          <i class="fa-regular fa-calendar"></i>
+          <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+        </time>
+      </div>
+
+      <div class="project-card-body">
+        <h3 class="project-title">
+          <a href="{{ post.url | relative_url }}" class="project-title-link">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+
+        <div class="project-excerpt">
+          {%- if post.description and post.description != "" -%}
+            <p>{{ post.description }}</p>
+          {%- elsif site.show_excerpts -%}
+            <p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <div class="project-card-footer">
+        <a href="{{ post.url | relative_url }}" class="project-action-link" aria-label="View project {{ post.title | escape }}">
+          <span class="action-text">Explore Project</span>
+          <span class="action-icon-circle">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
+      </div>
+    </article>
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}

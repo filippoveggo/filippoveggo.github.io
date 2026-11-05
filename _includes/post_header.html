@@ -1,13 +1,43 @@
-{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-<div class="container">
-	<h1>{{ page.title }}</h1>
-	<h4 class="post-description">{{ page.description }}</h4>
-	<div class="post-date" style="margin-top:20px">
-		Published on {{ page.date | date: date_format }}
-	</div>
-	<ul class="post-tags">
-		{%- for tag in page.categories -%}
-			<li>{{ tag }}</li>
-		{%- endfor -%}
-	</ul>
+<div class="hero-section post-hero-section">
+  <div class="hero-glass-panel">
+    <!-- Breadcrumb back link -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <a href="{{ "/" | relative_url }}" class="breadcrumb-item">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>All Projects</span>
+      </a>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current">{{ page.title }}</span>
+    </nav>
+
+    <!-- Category Pills -->
+    {%- if page.categories.size > 0 -%}
+    <div class="post-categories-pills">
+      {%- for tag in page.categories -%}
+        <span class="category-pill">
+          <span class="pill-dot"></span>
+          {{ tag }}
+        </span>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    <h1 class="hero-title post-title-main">{{ page.title }}</h1>
+
+    {%- if page.description and page.description != "" -%}
+    <p class="hero-tagline post-subtitle">{{ page.description }}</p>
+    {%- endif -%}
+
+    <div class="post-meta-bar">
+      <div class="meta-item">
+        <i class="fa-regular fa-calendar-days"></i>
+        <span>{{ page.date | date: "%b %-d, %Y" }}</span>
+      </div>
+      <div class="meta-separator">•</div>
+      <div class="meta-item">
+        <i class="fa-regular fa-user"></i>
+        <span>{{ site.author | default: "Filippo Veggo" }}</span>
+      </div>
+    </div>
+  </div>
 </div>

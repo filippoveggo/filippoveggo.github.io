@@ -5,43 +5,64 @@
   {%- include head.html -%}
 </head>
 
-<body>
+<body class="apple-liquid-glass-theme post-page">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWVK2CB" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <header class="texture-{{ site.texture.style }}">
-    <div class="container">
-      {%- include nav.html -%}
-    </div>
+
+  {%- include nav.html -%}
+
+  <header class="site-header">
     {%- include post_header.html -%}
   </header>
-  <main>
-    <div class="container">
-      <div class="post-container">
-        {{ content }}
-      </div>
 
-      <!-- Configure Disqus -->
+  <main class="site-main">
+    <div class="main-container post-main-container">
+      <article class="glass-card post-glass-article">
+        <div class="glass-sheen" aria-hidden="true"></div>
+        
+        <div class="post-content-typography">
+          {{ content }}
+        </div>
+
+        <div class="post-navigation-bar">
+          <a href="{{ "/" | relative_url }}" class="glass-btn glass-btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to All Projects</span>
+          </a>
+          
+          {%- if site.texture.social_links.mail -%}
+          <a href="mailto:{{ site.texture.social_links.mail }}?subject=Question regarding {{ page.title | url_encode }}" class="glass-btn glass-btn-primary">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Discuss This Project</span>
+          </a>
+          {%- endif -%}
+        </div>
+      </article>
+
+      <!-- Configure Disqus (if enabled) -->
       {%- if site.texture.disqus_shortname -%}
-      <div id="disqus_thread" style="margin-top:25px"></div>
-      <script>
-        var disqus_config = function () {
-          this.page.url = '{{ page.url | absolute_url }}';
-          this.page.identifier = '{{ page.url | absolute_url }}';
-        };
-        (function () {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://{{ site.texture.disqus_shortname }}.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
-          powered by Disqus.</a></noscript>
+      <section class="glass-card disqus-glass-card">
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url = '{{ page.url | absolute_url }}';
+            this.page.identifier = '{{ page.url | absolute_url }}';
+          };
+          (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://{{ site.texture.disqus_shortname }}.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view comments.</noscript>
+      </section>
       {%- endif -%}
     </div>
   </main>
+
   {%- include footer.html -%}
 </body>
 

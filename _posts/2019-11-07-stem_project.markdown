@@ -14,5 +14,4 @@ Link to GitHub project [here][Link-GitHub].
 
 [Link-GitHub]: https://github.com/filippoveggo/ProgettoSitoStem
 
-2017/2018 Istituto Zuccante
-
+*2017/2018 Istituto Zuccante*

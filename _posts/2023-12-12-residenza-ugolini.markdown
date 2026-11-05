@@ -15,21 +15,21 @@ Link to the website [here][Link-ResidenzaUgolini].
 
 ----
 
-Home Page:
+### Home Page:
 
-<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/HomePage.png" alt="Home page Residenza Ugolini"></div>
-<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/HomePage2.png" alt="Home page Residenza Ugolini pt. 2"></div>
-
-----
-
-Apartment Page: 
-<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/ApartmentPage.png" alt="Apartment page"></div>
+<div align="center"><img src="{{ "/images/ResidenzaUgolini/HomePage.png" | relative_url }}" alt="Home page Residenza Ugolini"></div>
+<div align="center"><img src="{{ "/images/ResidenzaUgolini/HomePage2.png" | relative_url }}" alt="Home page Residenza Ugolini pt. 2"></div>
 
 ----
 
-Contacts Page: 
-<div align="center"><img src="https://filippoveggo.github.io/images/ResidenzaUgolini/ContactsPage.png" alt="Contacts page"></div>
+### Apartment Page: 
+<div align="center"><img src="{{ "/images/ResidenzaUgolini/ApartmentPage.png" | relative_url }}" alt="Apartment page"></div>
 
 ----
 
-The project is not open source because it was created for a third party company
+### Contacts Page: 
+<div align="center"><img src="{{ "/images/ResidenzaUgolini/ContactsPage.png" | relative_url }}" alt="Contacts page"></div>
+
+----
+
+*The project is not open source because it was created for a third party company.*

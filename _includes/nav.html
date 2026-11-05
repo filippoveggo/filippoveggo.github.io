@@ -1,12 +1,74 @@
 {%- if site.texture.showNav -%}
-<div class="navbar">
-    <ul>
-        <a href="https://filippoveggo.github.io/">
-            <li>Home</li>
-        </a>
-        <a href="/about">
-            <li>About</li>
-        </a>
-    </ul>
-</div>
+<!-- Apple Liquid Glass Floating Navigation -->
+<nav class="liquid-nav-container" aria-label="Main Navigation">
+  <div class="liquid-nav-pill">
+    <!-- Brand / Monogram (links to Home) -->
+    <a href="{{ "/" | relative_url }}" class="nav-brand" aria-label="Home - Filippo Veggo">
+      <span class="nav-brand-avatar">FV</span>
+      <span class="nav-brand-name">Filippo Veggo</span>
+    </a>
+
+    <!-- Desktop Navigation Links (Only About) -->
+    <div class="nav-links">
+      <a href="{{ "/about" | relative_url }}" class="nav-link {% if page.url contains 'about' %}active{% endif %}">
+        <i class="fa-regular fa-user nav-link-icon"></i>
+        <span>About</span>
+      </a>
+    </div>
+
+    <!-- Quick Action Glass Buttons -->
+    <div class="nav-actions">
+      {%- if site.texture.social_links.github -%}
+      <a href="https://github.com/{{ site.texture.social_links.github }}" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="GitHub Profile" title="GitHub Profile">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      {%- endif -%}
+      {%- if site.texture.social_links.mail -%}
+      <a href="mailto:{{ site.texture.social_links.mail }}" class="nav-icon-btn" aria-label="Send Email" title="Send Email">
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+      <a href="mailto:{{ site.texture.social_links.mail }}" class="nav-cta-btn">
+        <span>Contact</span>
+      </a>
+      {%- endif -%}
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile iOS-Style Liquid Glass Bottom Tab Bar -->
+<nav class="mobile-liquid-tabbar" aria-label="Mobile Navigation">
+  <div class="tabbar-pill">
+    <a href="{{ "/" | relative_url }}" class="tab-item {% if page.url == '/' or page.layout == 'home' %}active{% endif %}">
+      <div class="tab-icon-wrap">
+        <i class="fa-solid fa-house"></i>
+      </div>
+      <span class="tab-label">Home</span>
+    </a>
+
+    <a href="{{ "/about" | relative_url }}" class="tab-item {% if page.url contains 'about' %}active{% endif %}">
+      <div class="tab-icon-wrap">
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <span class="tab-label">About</span>
+    </a>
+
+    {%- if site.texture.social_links.github -%}
+    <a href="https://github.com/{{ site.texture.social_links.github }}" target="_blank" rel="noopener noreferrer" class="tab-item">
+      <div class="tab-icon-wrap">
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <span class="tab-label">GitHub</span>
+    </a>
+    {%- endif -%}
+
+    {%- if site.texture.social_links.mail -%}
+    <a href="mailto:{{ site.texture.social_links.mail }}" class="tab-item">
+      <div class="tab-icon-wrap">
+        <i class="fa-regular fa-paper-plane"></i>
+      </div>
+      <span class="tab-label">Contact</span>
+    </a>
+    {%- endif -%}
+  </div>
+</nav>
 {%- endif -%}

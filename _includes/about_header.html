@@ -1,23 +1,44 @@
-<div class="container">
-    <h1>{{ page.headTitle }}</h1>
-    <ul class="social">
+<div class="hero-section page-hero-section">
+  <div class="hero-glass-panel">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <a href="{{ "/" | relative_url }}" class="breadcrumb-item">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Home</span>
+      </a>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current">About Me</span>
+    </nav>
+
+    <div class="about-hero-identity">
+      <div class="identity-avatar-glass">
+        <span class="avatar-initials">FV</span>
+      </div>
+      <div class="identity-text">
+        <h1 class="hero-title">{{ page.headTitle | default: "About Me" }}</h1>
+        <p class="hero-tagline">
+          Front-End Developer, Flutter enthusiast & UI/UX designer focused on building fluid, accessible, and delightful digital interfaces.
+        </p>
+      </div>
+    </div>
+
+    <!-- Social Glass Bar -->
+    <div class="hero-social-bar">
+      <div class="social-pills">
         {%- if site.texture.social_links.github -%}
-        <a href="https://github.com/{{ site.texture.social_links.github }}">
-            <li><i class="icon-github-circled"></i></li>
-        </a>
-        {%- endif -%} {%- if site.texture.social_links.linkedIn -%}
-        <a href="https://linkedin.com/{{ site.texture.social_links.linkedIn }}">
-            <li><i class="icon-linkedin-squared"></i></li>
-        </a>
-        {%- endif -%} {%- if site.texture.social_links.twitter -%}
-        <a href="https://twitter.com/{{ site.texture.social_links.twitter }}">
-            <li><i class="icon-twitter-squared"></i></li>
-        </a>
-        {%- endif -%} {%- if site.texture.social_links.mail -%}
-        <a href="mailto:{{ site.texture.social_links.mail }}">
-            <li><i class="font-awesome-icon fas fa-envelope"></i></li>
+        <a href="https://github.com/{{ site.texture.social_links.github }}" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
         </a>
         {%- endif -%}
 
-    </ul>
+        {%- if site.texture.social_links.mail -%}
+        <a href="mailto:{{ site.texture.social_links.mail }}" class="social-pill" aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
+          <span>Email</span>
+        </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
 </div>

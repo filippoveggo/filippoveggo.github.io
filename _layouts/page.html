@@ -2,26 +2,28 @@
 <html lang="en">
 
 <head>
-	{%- include head.html -%}
+  {%- include head.html -%}
 </head>
 
-<body>
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWVK2CB" height="0" width="0"
-			style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-	<header class="texture-{{ site.texture.style }}">
-		<div class="container">
-			{%- include nav.html -%}
-		</div>
-		{%- include page_header.html -%}
-	</header>
-	<main>
-		<div class="container">
-			{{ content }}
-		</div>
-	</main>
-	{%- include footer.html -%}
+<body class="apple-liquid-glass-theme">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWVK2CB" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  {%- include nav.html -%}
+
+  <header class="site-header">
+    {%- include page_header.html -%}
+  </header>
+
+  <main class="site-main" id="main-content">
+    <div class="main-container">
+      {{ content }}
+    </div>
+  </main>
+
+  {%- include footer.html -%}
 </body>
 
 </html>

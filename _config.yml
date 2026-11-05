@@ -4,7 +4,7 @@ email: filippoveggo@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   This is a website to contain all the projects, open source or not, of filippo veggo
 show_excerpts: true # set to true to show excerpts on the homepage
-baseurl: /
+baseurl: ""
 url: https://filippoveggo.github.io/
 
 tagline: A website for all my projects
