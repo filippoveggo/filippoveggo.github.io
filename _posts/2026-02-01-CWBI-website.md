@@ -19,17 +19,23 @@ Link to the mobile mockup [here][Link-MobileMockup].
 
 ----
 
-### Computer Mockup: 
+### Computer's Home Page: 
 <div align="center">
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/ZXOwfKqC0wMtndaTN7acyo/CWBI-Website?node-id=71-429&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=63%3A418&embed-host=share" alt="Computer Mockup" allowfullscreen></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="max-width" height="450" src="https://embed.figma.com/proto/ZXOwfKqC0wMtndaTN7acyo/CWBI-Website?node-id=71-429&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=63%3A418&embed-host=share" alt="Computer Mockup" allowfullscreen></iframe>
 </div>
+
+<div align="center"><img src="{{ "/images/GlassDesignWebsite/HomePage.png" | relative_url }}" alt="CWBI Computer's Home page"></div>
+
 
 ----
 
-### Mobile Mockup: 
+### Mobile's Home Page: 
 <div align="center">
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/ZXOwfKqC0wMtndaTN7acyo/CWBI-Website?node-id=76-658&p=f&scaling=scale-down&content-scaling=fixed&page-id=76%3A657&starting-point-node-id=76%3A658&embed-host=share" alt="Mobile Mockup" allowfullscreen></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="max-width" height="450" src="https://embed.figma.com/proto/ZXOwfKqC0wMtndaTN7acyo/CWBI-Website?node-id=76-658&p=f&scaling=scale-down&content-scaling=fixed&page-id=76%3A657&starting-point-node-id=76%3A658&embed-host=share" alt="Mobile Mockup" allowfullscreen></iframe>
 </div>
+
+<div align="center"><img src="{{ "/images/GlassDesignWebsite/MobileHomePage.png" | relative_url }}" alt="CWBI Mobile's Home page"></div>
+
 
 ----
 
