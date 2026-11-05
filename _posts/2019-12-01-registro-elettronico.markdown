@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "App registro elettronico"
+title:  "FV | App registro elettronico"
 description: Flutter client for electronic register data management (Classeviva)
 date:   2019-12-01 +0530
 categories: Dart Flutter Mobile

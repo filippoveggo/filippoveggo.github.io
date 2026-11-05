@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Artivism PWA"
+title:  "FV | Artivism PWA"
 description: Front-end Progressive Web App for an art blockchain platform
 date:   2020-08-16 +0530
 categories: HTML CSS JQuery PWA
