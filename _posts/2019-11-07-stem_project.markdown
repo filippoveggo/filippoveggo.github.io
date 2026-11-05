@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "FV | Stem Project"
+title:  "Stem Project"
 description: Website for a school project
 date:   2019-11-07 +0530
 categories: HTML CSS Javascript JQuery

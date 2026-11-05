@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "FV | Residenza Ugolini"
+title:  "Residenza Ugolini"
 description: Residenza Ugolini's Website
 date:   2023-12-12 +0530
 categories: HTML Css

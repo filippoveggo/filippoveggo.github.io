@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "FV | MyRoma Website"
+title:  "MyRoma Website"
 description: Website of MyRoma app 
 date:   2020-07-23 +0530
 categories: HTML Css JQuery
