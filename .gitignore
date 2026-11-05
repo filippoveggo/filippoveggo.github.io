@@ -1,7 +1,13 @@
 *.gem
 .bundle
 .sass-cache
-_site
-_preview
+.jekyll-cache/
+.jekyll-metadata
+_site/
+_preview/
 Gemfile.lock
 .DS_Store
+node_modules/
+package-lock.json
+package.json
+*.map

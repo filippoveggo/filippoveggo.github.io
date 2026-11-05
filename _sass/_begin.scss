@@ -1,10 +1,5 @@
 /* Apple Liquid Glass Foundation & Mixins */
 
-// Breakpoints
-$mobile: 640px;
-$tablet: 1024px;
-$desktop: 1440px;
-
 // Base Box Sizing
 *,
 *::before,
@@ -14,25 +9,25 @@ $desktop: 1440px;
 
 // Media Query Mixins
 @mixin mobile {
-  @media screen and (max-width: #{$mobile - 1px}) {
+  @media screen and (max-width: 639px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+  @media screen and (min-width: 640px) and (max-width: 1023px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: #{$tablet}) {
+  @media screen and (min-width: 1024px) {
     @content;
   }
 }
 
 @mixin ultrawide {
-  @media screen and (min-width: #{$desktop}) {
+  @media screen and (min-width: 1440px) {
     @content;
   }
 }
