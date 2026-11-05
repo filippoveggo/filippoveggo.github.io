@@ -1,130 +1,94 @@
-# texture
+# Filippo Veggo — Personal Portfolio 
 
-A configurable jekyll theme for simply beautiful blogs.
+<div align="center">
 
-**Demo**: [thelehhman.com/texture](https://thelehhman.com/texture)
+[![Live Website](https://img.shields.io/badge/Live%20Website-filippoveggo.github.io-0a84ff?style=for-the-badge&logo=safari&logoColor=white)](https://filippoveggo.github.io/)
+[![Design Style](https://img.shields.io/badge/Design-Apple%20Liquid%20Glass%20%2F%20VisionOS-af52de?style=for-the-badge&logo=apple&logoColor=white)](https://filippoveggo.github.io/)
+[![CI/CD](https://img.shields.io/badge/Deploy-GitHub%20Pages%20Actions-30d158?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/filippoveggo/filippoveggo.github.io/actions)
+[![Jekyll](https://img.shields.io/badge/Engine-Jekyll%20%2B%20SCSS-ff9f0a?style=for-the-badge&logo=jekyll&logoColor=white)](https://jekyllrb.com/)
 
-![texture theme preview](/screen1.png)
+<p align="center">
+  <strong>Sito portfolio personale di Filippo Veggo</strong><br>
+  Front-End Developer & UI/UX Designer interessato nell'ecosistema Apple, interfacce moderne e sviluppo mobile.
+</p>
 
+</div>
 
-## Installation on Github Pages
+---
 
-Add this line to your site's `_config.yml`:
-```yaml
-remote_theme: thelehhman/texture
+## ✨ Panoramica & Stile "Apple Liquid Glass"
+
+Il sito web è stato progettato adottando l'estetica **Apple Liquid Glass** (*Glassmorphism moderno / VisionOS Design System*), unendo alte prestazioni statiche con una resa visiva fluida e raffinata:
+
+* 🪟 **Materiali Glassmorphic Traslucidi:** Superfici semi-trasparenti ed effetto rifrazione ottica.
+* 💡 **Bordi Speculari & Profondità** 
+* 🌌 **Sfondo Dinamico Aurora Mesh:** Sfere orbitali organiche con gradiente radiale che fluttuano dolcemente in background con animazioni CSS native.
+* 🔤 **Tipografia Apple Human Interface:** Font stack di sistema San Francisco / Inter con gerarchia visiva ad alto contrasto (WCAG AA/AAA compliant) e titoli a gradiente metallico.
+* ✨ **Micro-interazioni & Specular Sheen:** Riflesso speculare interattivo che segue le coordinate del cursore desktop in tempo reale e risposte tattili.
+* 📱 **Navigazione Dual-Mode Completamente Responsive:**
+  * **Desktop:** Navbar fluttuante Liquid Glass pill ancorata in alto con scroll-elevation.
+  * **Mobile (< 640px):** Floating TabBar in stile iOS posizionata in basso, ergonomica per il pollice e compatibile con le safe-areas dell'iPhone.
+
+---
+
+## 🗂️ Struttura del Progetto
+
+```text
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # Pipeline CI/CD GitHub Actions per deploy automatico su Pages
+├── _includes/
+│   ├── head.html               # Tag viewport, meta WebApp iOS, font Inter, icone FontAwesome
+│   ├── nav.html                # Barra di navigazione (Pill fluttuante desktop & TabBar iOS mobile)
+│   ├── page_header.html        # Hero banner glassmorphic con status badge e social pill
+│   ├── about_header.html       # Header pagina About con breadcrumbs e monogramma avatar
+│   ├── post_header.html        # Header dei singoli progetti con tag e metadati
+│   └── footer.html             # Footer Liquid Glass a 3 colonne e canvas Aurora Mesh
+├── _layouts/
+│   ├── page.html               # Base layout con contenitore fluttuante
+│   ├── home.html               # Vetrina progetti a griglia CSS reattiva (1, 2 e 3 colonne)
+│   ├── about.html              # Layout profilo personale con matrice competenze e progetti
+│   └── post.html               # Layout case-study per i singoli articoli con framing immagini
+├── _posts/                     # Articoli e casi di studio dei progetti (Markdown + Liquid)
+├── _sass/
+│   ├── _begin.scss             # Breakpoints responsive e mixin Liquid Glass
+│   ├── _syntax.scss            # Syntax highlighting stile Apple Xcode Dark
+│   └── _theme.scss             # Design System principale, variabili CSS e animazioni
+├── assets/
+│   ├── css/
+│   │   ├── style.scss          # Entry point compilato da Jekyll su GitHub Pages
+│   │   └── style.css           # CSS precompilato pronto all'uso
+│   └── js/
+│       └── liquid-glass.js     # Micro-interazioni vaniglia (specular sheen, scroll elevate)
+├── _config.yml                 # Configurazione Jekyll (titoli, permalink, metadati SEO)
+├── Gemfile                     # Dipendenze conformi a GitHub Pages (gem "github-pages")
+├── index.md                    # Home page
+├── about.md                    # Pagina About Me
+└── 404.html                    # Pagina di errore 404 Liquid Glass
 ```
 
-**NOTE: If you are forking this repo, remove `base_url: /texture` in the `_config.yml` which is required to load the required website assets**
-## Installation
+---
 
-Add this line to your Jekyll site's `Gemfile`:
+## 🔄 Deploy Automatico (CI/CD)
 
-```ruby
-gem "texture"
-```
+Il repository è configurato con **GitHub Actions**:
+* Qualsiasi commit pushato sul branch `master` attiva automaticamente il workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+* Il workflow compila il sito Jekyll con le versioni ufficiali di GitHub Pages ed esegue il deploy live in pochi secondi senza richiedere alcuna configurazione manuale.
 
-And add this line to your Jekyll site's `_config.yml`:
+---
 
-```yaml
-theme: texture
-```
+## 📬 Contatti & Collegamenti
 
-And then execute:
+* 👨‍💻 **Autore:** Filippo Veggo
+* 🎓 **Percorso:** 
+  * Laureando L-18: "Gestione d'Impresa"
+  * Studente presso ITIS "C. Zuccante" (Mestre, Venezia)
+* 🐙 **GitHub:** [@filippoveggo](https://github.com/filippoveggo)
+* ✉️ **Email:** [filippoveggo@gmail.com](mailto:filippoveggo@gmail.com)
+* 🌐 **Sito Web Live:** [https://filippoveggo.github.io/](https://filippoveggo.github.io/)
 
-    $ bundle
+---
 
-Or install it yourself as:
-
-    $ gem install texture
-
-## Usage
-
-The "texture" key in _config.yml is used to customize the theme data.
-```yaml
-texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
-
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman # format: locale/username
-```
-
-**Styling**
-
-Multiple header styles are supported using the "style" property under texture in `_config.yml`.
-
-```yaml
-texture:
-  style: [yellow|red|black|blue|green|purple]
-```
-
-For example, the blue style looks like this:
-
-![texture theme blue](/screen2.png)
-
-
-**Texture Picker**
-
-You can toggle the texture picker to show/experiment various textures on your site using the showPicker variable. Remember to make it `false` for production.
-
-```yaml
-texture:
-  showPicker: [false|true] # show the texture selector(development purposes)
-```
-
-**Comments (Disqus)**
-
-Comments on posts can be enabled by specifying your disqus_shortname under texture in `_config.yml`. For example,
-```yaml
-texture:
-  disqus_shortname: games
-```
-
-**Google Analytics**
-
-It can be enabled by specifying your analytics id under texture in `_config.yml`
-```yaml
-texture:
-  analytics_id: '< YOUR ID >'
-```
-
-**Excerpts**
-
-Excerpts can be enabled by adding the following line to your `_config.yml`
-```yaml
-show_excerpts: true
-```
-
-**Toggle Navbar**
-
-```yaml
-texture:
-  showNav: true
-```
-
-**Layouts**
-
-- Home
-- Page
-- Post
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/texture. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `texture.gemspec` accordingly.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
+<div align="center">
+  <sub>Progettato e sviluppato con ❤️</sub>
+</div>
