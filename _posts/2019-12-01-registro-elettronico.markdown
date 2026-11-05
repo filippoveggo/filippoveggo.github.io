@@ -14,7 +14,7 @@ I am the designer of most of the pages and interface components of this applicat
 <script async src="//www.instagram.com/embed.js"></script>
 </div>
 
-[This][Instagram-Link] is what it last of the project.
+[This][Instagram-Link] is what's left of the project
 
 [Instagram-Link]: https://www.instagram.com/registro_elettronico_app/
 
