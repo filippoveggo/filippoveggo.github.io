@@ -13,17 +13,17 @@ Creation of the front-end interface and mobile-first experience of an art blockc
 ----
 
 ### Home Page:
-<div align="center"><img src="https://i.imgur.com/PEn7ETs.png" alt="Home page della PWA di Artivism"></div>
+<div align="center"><img src="{{ "/images/Artivism/home.png" | relative_url }}" alt="Home page della PWA di Artivism"></div>
 
 ----
 
 ### Community Page: 
-<div align="center"><img src="https://i.imgur.com/7geKlBe.png" alt="Community page della PWA di Artivism"></div>
+<div align="center"><img src="{{ "/images/Artivism/community.png" | relative_url }}" alt="Community page della PWA di Artivism"></div>
 
 ----
 
 ### Profile Page: 
-<div align="center"><img src="https://i.imgur.com/i7HPAm8.png" alt="Profile page della PWA di Artivism"></div>
+<div align="center"><img src="{{ "/images/Artivism/profile.png" | relative_url }}" alt="Profile page della PWA di Artivism"></div>
 
 ----
 
