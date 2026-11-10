@@ -297,6 +297,18 @@
     if (metaTheme) {
       metaTheme.setAttribute('content', theme === 'light' ? '#f5f5f7' : '#070913');
     }
+
+    const themeTitle = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) {
+      themeBtn.setAttribute('title', themeTitle);
+      themeBtn.setAttribute('aria-label', themeTitle);
+    }
+    const mobileThemeBtn = document.getElementById('mobile-theme-toggle-btn');
+    if (mobileThemeBtn) {
+      mobileThemeBtn.setAttribute('title', themeTitle);
+      mobileThemeBtn.setAttribute('aria-label', themeTitle);
+    }
   }
 
   /* ==========================================================================
@@ -324,25 +336,29 @@
       }
     });
 
-    // Update Language Toggle Button Labels (shows target language to switch to)
-    const nextLangLabel = validLang === 'en' ? 'IT' : 'EN';
-    const langLabel = document.getElementById('lang-label');
-    if (langLabel) langLabel.textContent = nextLangLabel;
+    // Update Language Toggle Button Flags (shows target language to switch to)
+    const itFlags = document.querySelectorAll('.nav-flag-icon.flag-it');
+    const enFlags = document.querySelectorAll('.nav-flag-icon.flag-en');
 
-    const mobileLangLabel = document.getElementById('mobile-lang-label');
-    if (mobileLangLabel) mobileLangLabel.textContent = nextLangLabel;
+    if (validLang === 'en') {
+      itFlags.forEach((el) => { el.style.display = 'inline-flex'; });
+      enFlags.forEach((el) => { el.style.display = 'none'; });
+    } else {
+      itFlags.forEach((el) => { el.style.display = 'none'; });
+      enFlags.forEach((el) => { el.style.display = 'inline-flex'; });
+    }
 
     // Update Button Titles/Aria
+    const titleText = validLang === 'en' ? 'Passa all\'italiano' : 'Switch to English';
     const langToggleBtn = document.getElementById('lang-toggle-btn');
     if (langToggleBtn) {
-      const titleText = validLang === 'en' ? 'Passa all\'italiano' : 'Switch to English';
       langToggleBtn.setAttribute('title', titleText);
       langToggleBtn.setAttribute('aria-label', titleText);
     }
 
     const mobileLangToggleBtn = document.getElementById('mobile-lang-toggle-btn');
     if (mobileLangToggleBtn) {
-      const titleText = validLang === 'en' ? 'Passa all\'italiano' : 'Switch to English';
+      mobileLangToggleBtn.setAttribute('title', titleText);
       mobileLangToggleBtn.setAttribute('aria-label', titleText);
     }
 
