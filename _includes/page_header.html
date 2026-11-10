@@ -7,7 +7,7 @@
     </div>
 
     <!-- Title with Apple gradient -->
-    <h1 class="hero-title" style="line-height: normal;">{{ site.texture.title }}</h1>
+    <h1 class="hero-title">{{ site.texture.title }}</h1>
     
     <!-- Tagline & Bio description -->
     <p class="hero-tagline">
@@ -44,7 +44,7 @@
         {%- endif -%}
 
         {%- if site.texture.social_links.mail -%}
-        <a href="mailto:{{ site.texture.social_links.mail }}" class="social-pill" aria-label="Email">
+        <a href="mailto:{{ site.texture.social_links.mail }}" class="social-pill" aria-label="Email: {{ site.texture.social_links.mail }}">
           <i class="fa-regular fa-envelope"></i>
           <span>{{ site.texture.social_links.mail }}</span>
         </a>
