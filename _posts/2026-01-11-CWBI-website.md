@@ -1,12 +1,9 @@
 ---
 layout: post
-title:  "CWBI Website Redesign"
-description: Complete architectural redesign and corporate web identity for CWBI enterprise solutions
+title:  "Glass Design Website"
+description: CWBI Website Redesign
 date:   2026-01-11 +0530
-categories: Figma UI/UX Web
-bento_featured: true
-bento_type: "web"
-bento_tag: "Enterprise Portal"
+categories: Figma UI/UX
 ---
 
 As a personal project, I decided to take a local company's website and redesign it based on the latest design trend at the time—Apple's LiquidGlass.

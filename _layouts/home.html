@@ -2,282 +2,70 @@
 layout: page
 ---
 
-{%- assign featured_post = site.posts | where: "bento_featured", true | first -%}
-{%- unless featured_post -%}
-  {%- assign featured_post = site.posts.first -%}
-{%- endunless -%}
-
-<section class="bento-section" id="projects" aria-labelledby="bento-heading">
-  <div class="bento-section-header sr-only">
-    <h2 id="bento-heading">Featured Portfolio & Bento Showcase</h2>
+{%- if site.posts.size > 0 -%}
+<section class="projects-section" id="projects" aria-labelledby="projects-heading">
+  <div class="section-header">
+    <div class="section-title-wrap">
+      <div class="section-eyebrow">
+        <i class="fa-solid fa-sparkles"></i>
+        <span>Portfolio</span>
+      </div>
+      <h2 id="projects-heading" class="section-title">Selected Projects & Work</h2>
+      <p class="section-subtitle">A collection of web applications, mobile user interfaces, and client projects built with modern technologies.</p>
+    </div>
+    <div class="projects-counter-pill">
+      <span class="counter-number">{{ site.posts.size }}</span>
+      <span class="counter-label">Projects</span>
+    </div>
   </div>
 
-  <div class="bento-grid" id="bento-container">
-
-    <!-- ===================================================================
-         TILE 1: MARQUEE HERO CASE STUDY (Span 2 cols x 2 rows)
-         =================================================================== -->
-    {%- if featured_post -%}
-    <article class="bento-card tile-featured" data-type="{{ featured_post.bento_type | default: 'web' }}">
-      <div class="bento-sheen" aria-hidden="true"></div>
+  <div class="projects-grid">
+    {%- for post in site.posts -%}
+    <article class="glass-card project-card" data-tilt>
+      <div class="glass-sheen" aria-hidden="true"></div>
       
-      <div class="featured-top-content">
-        <div class="featured-badge">
-          <i class="fa-solid fa-star"></i>
-          <span>{{ featured_post.bento_tag | default: "Featured Case Study" }}</span>
+      <div class="project-card-header">
+        <div class="project-tags-list">
+          {%- if post.categories.size > 0 -%}
+            {%- for tag in post.categories -%}
+              <span class="project-tag-pill">{{ tag }}</span>
+            {%- endfor -%}
+          {%- else -%}
+            <span class="project-tag-pill">Project</span>
+          {%- endif -%}
         </div>
-        
-        <h3 class="featured-title">
-          <a href="{{ featured_post.url | relative_url }}" class="bento-title-link">
-            {{ featured_post.title | escape }}
+        <time class="project-date" datetime="{{ post.date | date_to_xmlschema }}">
+          <i class="fa-regular fa-calendar"></i>
+          <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+        </time>
+      </div>
+
+      <div class="project-card-body">
+        <h3 class="project-title">
+          <a href="{{ post.url | relative_url }}" class="project-title-link">
+            {{ post.title | escape }}
           </a>
         </h3>
 
-        <p class="featured-desc">
-          {%- if featured_post.description and featured_post.description != "" -%}
-            {{ featured_post.description }}
-          {%- else -%}
-            {{ featured_post.excerpt | strip_html | truncatewords: 24 }}
+        <div class="project-excerpt">
+          {%- if post.description and post.description != "" -%}
+            <p>{{ post.description }}</p>
+          {%- elsif site.show_excerpts -%}
+            <p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
           {%- endif -%}
-        </p>
-      </div>
-
-      <!-- Realistic Glass Safari Window Mockup -->
-      <div class="device-safari-frame">
-        <div class="safari-header">
-          <div class="safari-dots" aria-hidden="true">
-            <span class="safari-dot red"></span>
-            <span class="safari-dot yellow"></span>
-            <span class="safari-dot green"></span>
-          </div>
-          <div class="safari-url-bar">cwbi.it — enterprise corporate portal</div>
-        </div>
-        <div class="safari-screen">
-          <div class="mock-stat-badge">
-            <i class="fa-solid fa-bolt"></i>
-            <span>99/100 Lighthouse Performance</span>
-          </div>
-          <div class="mock-headline">Enterprise Cloud & IT Solutions</div>
-          <div class="mock-sub">Clean modular architecture built with SCSS & Jekyll</div>
         </div>
       </div>
 
-      <div class="card-action-bar">
-        <a href="{{ featured_post.url | relative_url }}" class="bento-action-link" aria-label="Explore {{ featured_post.title | escape }}">
-          <span class="action-text">Explore Full Case Study</span>
-          <span class="action-arrow">
+      <div class="project-card-footer">
+        <a href="{{ post.url | relative_url }}" class="project-action-link" aria-label="View project {{ post.title | escape }}">
+          <span class="action-text">Explore Project</span>
+          <span class="action-icon-circle">
             <i class="fa-solid fa-arrow-right"></i>
           </span>
         </a>
       </div>
     </article>
-    {%- endif -%}
-
-    <!-- ===================================================================
-         TILE 2: PROFILE & IDENTITY (Span 2 cols x 1 row)
-         =================================================================== -->
-    <article class="bento-card tile-bio">
-      <div class="bento-sheen" aria-hidden="true"></div>
-      
-      <div>
-        <div class="bio-top">
-          <div class="bio-profile">
-            <div class="bio-monogram">FV</div>
-            <div class="bio-title-wrap">
-              <h3 class="bio-heading">Filippo Veggo</h3>
-              <p class="bio-subheading">Front-End & UI/UX Designer</p>
-            </div>
-          </div>
-          <div class="status-badge">
-            <span class="status-pulse"></span>
-            <span>Available</span>
-          </div>
-        </div>
-        
-        <p class="bio-copy">
-          Studying <strong>Gestione d'Impresa (L-18)</strong> in Venice, combining business strategy with software engineering to craft polished digital products.
-        </p>
-      </div>
-
-      <div class="bio-chips">
-        <span class="bio-chip"><i class="fa-solid fa-location-dot"></i> Venice, Italy</span>
-        <span class="bio-chip"><i class="fa-solid fa-graduation-cap"></i> ITIS "C. Zuccante"</span>
-        <span class="bio-chip"><i class="fa-brands fa-apple"></i> HIG & VisionOS</span>
-      </div>
-    </article>
-
-    <!-- ===================================================================
-         TILE 3: TECHNICAL ARSENAL (Span 1 col x 1 row)
-         =================================================================== -->
-    <article class="bento-card tile-tech">
-      <div class="bento-sheen" aria-hidden="true"></div>
-      
-      <div>
-        <div class="tile-label">
-          <i class="fa-solid fa-layer-group"></i>
-          <span>Core Stack</span>
-        </div>
-        <h3 class="tile-title">Technical Arsenal</h3>
-        
-        <div class="tech-pill-grid">
-          <span class="tech-pill"><i class="fa-brands fa-flutter" style="color: #54c5f8;"></i> Flutter</span>
-          <span class="tech-pill"><i class="fa-brands fa-sass" style="color: #cf649a;"></i> SCSS</span>
-          <span class="tech-pill"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</span>
-          <span class="tech-pill"><i class="fa-solid fa-code"></i> Dart</span>
-          <span class="tech-pill"><i class="fa-solid fa-gem" style="color: #e9573f;"></i> Jekyll</span>
-          <span class="tech-pill"><i class="fa-solid fa-mobile-screen"></i> Responsive</span>
-        </div>
-      </div>
-
-      <div class="card-action-bar">
-        <a href="{{ "/about" | relative_url }}" class="bento-action-link" aria-label="View technical skills">
-          <span class="action-text">View Skills</span>
-          <span class="action-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
-          </span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ===================================================================
-         TILE 4: PERFORMANCE BENCHMARK (Span 1 col x 1 row)
-         =================================================================== -->
-    <article class="bento-card tile-metric">
-      <div class="bento-sheen" aria-hidden="true"></div>
-      
-      <div>
-        <div class="tile-label green-label">
-          <i class="fa-solid fa-gauge-high"></i>
-          <span>Performance</span>
-        </div>
-        <div class="metric-number">98+</div>
-        <div class="metric-caption">Lighthouse Benchmark</div>
-        <div class="metric-note">Zero-bloat static architecture</div>
-      </div>
-
-      <div class="card-action-bar green-action">
-        <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Ffilippoveggo.github.io%2F" target="_blank" rel="noopener noreferrer" class="bento-action-link" aria-label="View Lighthouse Report">
-          <span class="action-text">Audit Report</span>
-          <span class="action-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
-          </span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ===================================================================
-         SECONDARY PROJECTS (Mapped from site.posts)
-         =================================================================== -->
-    {%- for post in site.posts -%}
-      {%- if post.url != featured_post.url -%}
-        {%- if post.bento_span == "2x1" -%}
-          <!-- Horizontal Card (Span 2 cols x 1 row) -->
-          <article class="bento-card tile-project-horiz" data-type="{{ post.bento_type | default: 'web' }}">
-            <div class="bento-sheen" aria-hidden="true"></div>
-            
-            <div class="horiz-info-wrap">
-              <div class="tile-label">
-                <i class="fa-solid fa-hotel"></i>
-                <span>{{ post.bento_tag | default: "Client Work" }} • {{ post.date | date: "%Y" }}</span>
-              </div>
-              <h3 class="tile-title-lg">
-                <a href="{{ post.url | relative_url }}" class="bento-title-link">
-                  {{ post.title | escape }}
-                </a>
-              </h3>
-              <p class="tile-excerpt">
-                {%- if post.description and post.description != "" -%}
-                  {{ post.description }}
-                {%- else -%}
-                  {{ post.excerpt | strip_html | truncatewords: 16 }}
-                {%- endif -%}
-              </p>
-              
-              <div class="card-action-bar no-border">
-                <a href="{{ post.url | relative_url }}" class="bento-action-link" aria-label="View project {{ post.title | escape }}">
-                  <span class="action-text">Explore Project</span>
-                  <span class="action-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-
-            <div class="proj-mini-art" aria-hidden="true">
-              <i class="fa-solid fa-compass"></i>
-            </div>
-          </article>
-
-        {%- else -%}
-          <!-- Compact Project Card (Span 1 col x 1 row) -->
-          <article class="bento-card tile-project-compact" data-type="{{ post.bento_type | default: 'web' }}">
-            <div class="bento-sheen" aria-hidden="true"></div>
-            
-            <div>
-              <div class="tile-label">
-                {%- if post.bento_type == 'mobile' -%}
-                  <i class="fa-solid fa-mobile-screen"></i>
-                {%- else -%}
-                  <i class="fa-solid fa-code"></i>
-                {%- endif -%}
-                <span>{{ post.bento_tag | default: "Project" }} • {{ post.date | date: "%Y" }}</span>
-              </div>
-              
-              <h3 class="tile-title-md">
-                <a href="{{ post.url | relative_url }}" class="bento-title-link">
-                  {{ post.title | escape }}
-                </a>
-              </h3>
-
-              <p class="tile-excerpt-sm">
-                {%- if post.description and post.description != "" -%}
-                  {{ post.description }}
-                {%- else -%}
-                  {{ post.excerpt | strip_html | truncatewords: 12 }}
-                {%- endif -%}
-              </p>
-            </div>
-
-            <div class="card-action-bar">
-              <a href="{{ post.url | relative_url }}" class="bento-action-link" aria-label="View project {{ post.title | escape }}">
-                <span class="action-text">View Case Study</span>
-                <span class="action-arrow">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </span>
-              </a>
-            </div>
-          </article>
-        {%- endif -%}
-      {%- endif -%}
     {%- endfor -%}
-
-    <!-- ===================================================================
-         TILE 8: FULL-WIDTH CONTACT CALLOUT (Span 4 cols)
-         =================================================================== -->
-    <article class="bento-card tile-cta">
-      <div class="bento-sheen" aria-hidden="true"></div>
-      
-      <div class="cta-text-wrap">
-        <h3 class="cta-heading">Ready to build something exceptional?</h3>
-        <p class="cta-subheading">Open for front-end architecture, mobile app engineering, and UI/UX product design.</p>
-      </div>
-
-      <div class="cta-buttons">
-        {%- if site.texture.social_links.mail -%}
-        <a href="mailto:{{ site.texture.social_links.mail }}" class="btn-bento-primary">
-          <i class="fa-regular fa-envelope"></i>
-          <span>Get in Touch</span>
-        </a>
-        {%- endif -%}
-
-        {%- if site.texture.social_links.github -%}
-        <a href="https://github.com/{{ site.texture.social_links.github }}" target="_blank" rel="noopener noreferrer" class="btn-bento-secondary">
-          <i class="fa-brands fa-github"></i>
-          <span>GitHub</span>
-        </a>
-        {%- endif -%}
-      </div>
-    </article>
-
   </div>
 </section>
+{%- endif -%}

@@ -1,11 +1,9 @@
 ---
 layout: post
 title:  "Stem Project"
-description: Collaborative STEM educational portal created for Istituto Zuccante
+description: Website for a school project
 date:   2019-11-07 +0530
-categories: HTML CSS JavaScript JQuery
-bento_type: "web"
-bento_tag: "School Project"
+categories: HTML CSS Javascript JQuery
 ---
 
 Sito web fatto per il progetto 'STEM' anno scolastico 2017/2018 da Riccardo Calligaro e Filippo Veggo.

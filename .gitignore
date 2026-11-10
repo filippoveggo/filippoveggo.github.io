@@ -10,6 +10,4 @@ Gemfile.lock
 node_modules/
 package-lock.json
 package.json
-.superpowers/
-.agents/
 *.map

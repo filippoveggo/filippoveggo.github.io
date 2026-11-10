@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  "Registro Elettronico"
-description: Cross-platform Flutter mobile client for high school gradebook and attendance management
+title:  "App registro elettronico"
+description: Flutter client for electronic register data management (Classeviva)
 date:   2019-12-01 +0530
 categories: Dart Flutter Mobile
-bento_type: "mobile"
-bento_tag: "Flutter App"
 ---
 
 Flutter client for electronic register data management (Classeviva).
