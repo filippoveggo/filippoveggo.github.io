@@ -3,14 +3,14 @@
     <!-- Status Pill -->
     <div class="hero-status-badge">
       <span class="status-dot"></span>
-      <span class="status-text">Available for UI/UX & Web Development</span>
+      <span class="status-text" data-i18n="hero.status">Available for UI/UX & Web Development</span>
     </div>
 
     <!-- Title with Apple gradient -->
     <h1 class="hero-title">{{ site.texture.title }}</h1>
     
     <!-- Tagline & Bio description -->
-    <p class="hero-tagline">
+    <p class="hero-tagline" data-i18n="hero.tagline">
       Front-End Developer & UI/UX Designer crafting sleek web platforms, responsive experiences, and mobile apps with Apple-grade polish.
     </p>
 
@@ -18,23 +18,23 @@
     <div class="hero-actions">
       <a href="#projects" class="glass-btn glass-btn-primary">
         <i class="fa-solid fa-arrow-down-long"></i>
-        <span>Explore Work</span>
+        <span data-i18n="hero.explore">Explore Work</span>
       </a>
       <a href="{{ "/about" | relative_url }}" class="glass-btn glass-btn-secondary">
         <i class="fa-regular fa-user"></i>
-        <span>About Me</span>
+        <span data-i18n="hero.about">About Me</span>
       </a>
       {%- if site.texture.social_links.mail -%}
       <a href="mailto:{{ site.texture.social_links.mail }}" class="glass-btn glass-btn-secondary">
         <i class="fa-regular fa-envelope"></i>
-        <span>Get in Touch</span>
+        <span data-i18n="hero.contact">Get in Touch</span>
       </a>
       {%- endif -%}
     </div>
 
     <!-- Social Glass Bar -->
     <div class="hero-social-bar">
-      <span class="social-label">Connect:</span>
+      <span class="social-label" data-i18n="hero.connect">Connect:</span>
       <div class="social-pills">
         {%- if site.texture.social_links.github -%}
         <a href="https://github.com/{{ site.texture.social_links.github }}" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">

@@ -29,13 +29,13 @@
         <div class="post-navigation-bar">
           <a href="{{ "/" | relative_url }}" class="glass-btn glass-btn-secondary">
             <i class="fa-solid fa-arrow-left"></i>
-            <span>Back to All Projects</span>
+            <span data-i18n="post.back">Back to All Projects</span>
           </a>
           
           {%- if site.texture.social_links.mail -%}
           <a href="mailto:{{ site.texture.social_links.mail }}?subject=Question regarding {{ page.title | url_encode }}" class="glass-btn glass-btn-primary">
             <i class="fa-regular fa-envelope"></i>
-            <span>Discuss This Project</span>
+            <span data-i18n="post.discuss">Discuss This Project</span>
           </a>
           {%- endif -%}
         </div>
