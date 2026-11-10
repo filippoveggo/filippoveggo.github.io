@@ -414,7 +414,57 @@ img {
   border: 1px solid var(--glass-border);
   color: var(--text-secondary);
   font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
   transition: all var(--transition-fast);
+}
+
+.nav-lang-btn {
+  width: auto;
+  min-width: 44px;
+  padding: 0 10px;
+  border-radius: var(--radius-full);
+  gap: 5px;
+}
+
+.nav-lang-btn .lang-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* Theme switch icon visibility */
+.icon-theme-sun {
+  display: inline-block;
+}
+
+.icon-theme-moon {
+  display: none;
+}
+
+html[data-theme="light"] .icon-theme-sun {
+  display: none;
+}
+
+html[data-theme="light"] .icon-theme-moon {
+  display: inline-block;
+}
+
+button.tab-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+html[data-theme="light"] .nav-icon-btn {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="light"] .nav-icon-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .nav-icon-btn:hover {

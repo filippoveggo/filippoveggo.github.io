@@ -18,6 +18,18 @@
 
     <!-- Quick Action Glass Buttons -->
     <div class="nav-actions">
+      <!-- Language Switcher (EN / IT) -->
+      <button id="lang-toggle-btn" class="nav-icon-btn nav-lang-btn" aria-label="Switch language" title="Switch language">
+        <i class="fa-solid fa-globe"></i>
+        <span class="lang-label" id="lang-label">IT</span>
+      </button>
+
+      <!-- Theme Switcher (Dark / Light) -->
+      <button id="theme-toggle-btn" class="nav-icon-btn nav-theme-btn" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fa-solid fa-sun icon-theme-sun"></i>
+        <i class="fa-solid fa-moon icon-theme-moon"></i>
+      </button>
+
       {%- if site.texture.social_links.github -%}
       <a href="https://github.com/{{ site.texture.social_links.github }}" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="GitHub Profile" title="GitHub Profile">
         <i class="fa-brands fa-github"></i>
@@ -28,7 +40,7 @@
         <i class="fa-regular fa-envelope"></i>
       </a>
       <a href="mailto:{{ site.texture.social_links.mail }}" class="nav-cta-btn">
-        <span>Contact</span>
+        <span data-i18n="nav.contact">Contact</span>
       </a>
       {%- endif -%}
     </div>
@@ -66,9 +78,26 @@
       <div class="tab-icon-wrap">
         <i class="fa-regular fa-paper-plane"></i>
       </div>
-      <span class="tab-label">Contact</span>
+      <span class="tab-label" data-i18n="nav.contact">Contact</span>
     </a>
     {%- endif -%}
+
+    <!-- Mobile Language Switcher -->
+    <button id="mobile-lang-toggle-btn" class="tab-item tab-btn" aria-label="Switch language">
+      <div class="tab-icon-wrap">
+        <i class="fa-solid fa-globe"></i>
+      </div>
+      <span class="tab-label" id="mobile-lang-label">IT</span>
+    </button>
+
+    <!-- Mobile Theme Switcher -->
+    <button id="mobile-theme-toggle-btn" class="tab-item tab-btn" aria-label="Toggle theme">
+      <div class="tab-icon-wrap">
+        <i class="fa-solid fa-sun icon-theme-sun"></i>
+        <i class="fa-solid fa-moon icon-theme-moon"></i>
+      </div>
+      <span class="tab-label" id="mobile-theme-label" data-i18n="nav.theme">Theme</span>
+    </button>
   </div>
 </nav>
 {%- endif -%}
