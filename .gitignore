@@ -23,3 +23,7 @@ package.json
 # Editor configurations
 .vscode/
 .idea/
+
+# Local tests and documentation
+tests/
+docs/
