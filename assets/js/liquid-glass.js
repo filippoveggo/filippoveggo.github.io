@@ -6,19 +6,33 @@
 (function () {
   'use strict';
 
-  // 1. Dynamic Navbar Scroll Elevation
+  // 1. Dynamic Navbar Scroll Elevation (rAF throttled to prevent forced reflow)
   const navContainer = document.querySelector('.liquid-nav-container');
-  const handleScroll = () => {
+  let ticking = false;
+
+  const updateNavScroll = () => {
     if (!navContainer) return;
     if (window.scrollY > 24) {
       navContainer.classList.add('nav-scrolled');
     } else {
       navContainer.classList.remove('nav-scrolled');
     }
+    ticking = false;
+  };
+
+  const handleScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateNavScroll);
+      ticking = true;
+    }
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateNavScroll);
+  } else {
+    window.requestAnimationFrame(updateNavScroll);
+  }
 
   // 2. Interactive Specular Light Sheen on Glass Cards
   const cards = document.querySelectorAll('.glass-card');
@@ -59,13 +73,17 @@
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#' || !targetId) return;
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        e.preventDefault();
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+      try {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      } catch (err) {
+        // Fallback for non-standard selector or malformed hash
       }
     });
   });

@@ -49,7 +49,7 @@ layout: page
 
         <div class="project-excerpt">
           {%- if post.description and post.description != "" -%}
-            <p>{{ post.description }}</p>
+            <p>{{ post.description | escape }}</p>
           {%- elsif site.show_excerpts -%}
             <p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
           {%- endif -%}
@@ -57,7 +57,7 @@ layout: page
       </div>
 
       <div class="project-card-footer">
-        <a href="{{ post.url | relative_url }}" class="project-action-link" aria-label="View project {{ post.title | escape }}">
+        <a href="{{ post.url | relative_url }}" class="project-action-link" aria-label="Explore Project: {{ post.title | escape }}">
           <span class="action-text">Explore Project</span>
           <span class="action-icon-circle">
             <i class="fa-solid fa-arrow-right"></i>
