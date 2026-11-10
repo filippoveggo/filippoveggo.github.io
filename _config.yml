@@ -45,6 +45,10 @@ header_pages:
 # Build settings
 # theme: texture
 
+exclude:
+  - tests
+  - docs
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

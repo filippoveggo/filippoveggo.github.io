@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://filippoveggo.github.io/sitemap.xml
