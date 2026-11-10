@@ -19,6 +19,7 @@
           {%- if site.texture.social_links.mail -%}
           <li><a href="mailto:{{ site.texture.social_links.mail }}" data-i18n="footer.contact">Contact</a></li>
           {%- endif -%}
+          <li><button type="button" id="open-cookie-banner-btn" class="footer-link-btn" data-i18n="footer.cookies">Cookie Preferences</button></li>
         </ul>
       </div>
 
@@ -48,6 +49,8 @@
     </div>
   </div>
 </footer>
+
+{%- include cookie_banner.html -%}
 
 <!-- Background Ambient Mesh Aurora (Dynamic Apple Spatial Glow) -->
 <div class="ambient-aurora" aria-hidden="true">

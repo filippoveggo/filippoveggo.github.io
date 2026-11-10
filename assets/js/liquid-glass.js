@@ -248,6 +248,28 @@
     'footer.back_to_top': {
       en: 'Back to Top',
       it: 'Torna su'
+    },
+    'footer.cookies': {
+      en: 'Cookie Preferences',
+      it: 'Preferenze Cookie'
+    },
+
+    // Cookie & Privacy Consent Banner
+    'cookie.title': {
+      en: 'Privacy & Cookies',
+      it: 'Privacy & Cookie'
+    },
+    'cookie.desc': {
+      en: 'This website uses anonymous analytics cookies (Google Analytics via GTM) to understand traffic patterns and improve performance. Functional preferences (theme and language) use local storage.',
+      it: 'Questo sito utilizza cookie analitici anonimi (Google Analytics tramite GTM) per comprendere il traffico e migliorare l\'esperienza. Le preferenze funzionali (tema e lingua) utilizzano la memoria locale.'
+    },
+    'cookie.accept': {
+      en: 'Accept All',
+      it: 'Accetta Tutti'
+    },
+    'cookie.decline': {
+      en: 'Essential Only',
+      it: 'Solo Necessari'
     }
   };
 
@@ -477,6 +499,89 @@
       savedLang = localStorage.getItem('language') || 'en';
     } catch (e) {}
     applyLanguage(savedLang);
+
+    // Initialize Cookie Consent (GDPR / ePrivacy)
+    initCookieConsent();
+  }
+
+  /* ==========================================================================
+     10. Cookie Consent Management Engine (Google Consent Mode v2)
+     ========================================================================== */
+  function getCookieConsent() {
+    try {
+      return localStorage.getItem('cookie_consent');
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function setCookieConsent(status) {
+    try {
+      localStorage.setItem('cookie_consent', status);
+    } catch (e) {}
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        'analytics_storage': status === 'granted' ? 'granted' : 'denied'
+      });
+    }
+
+    hideCookieBanner();
+  }
+
+  function showCookieBanner() {
+    const banner = document.getElementById('cookie-consent-banner');
+    if (banner) {
+      banner.style.display = 'block';
+      // Trigger reflow to run CSS transition
+      void banner.offsetHeight;
+      banner.classList.remove('cookie-banner-hidden');
+    }
+  }
+
+  function hideCookieBanner() {
+    const banner = document.getElementById('cookie-consent-banner');
+    if (banner) {
+      banner.classList.add('cookie-banner-hidden');
+      setTimeout(() => {
+        banner.style.display = 'none';
+      }, 400);
+    }
+  }
+
+  function initCookieConsent() {
+    const consent = getCookieConsent();
+    const banner = document.getElementById('cookie-consent-banner');
+
+    // If no prior consent decision has been saved, prompt user with consent banner
+    if (!consent && banner) {
+      setTimeout(showCookieBanner, 600);
+    }
+
+    const acceptBtn = document.getElementById('cookie-accept-btn');
+    const declineBtn = document.getElementById('cookie-decline-btn');
+    const preferencesBtn = document.getElementById('open-cookie-banner-btn');
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', (e) => {
+        if (e) e.preventDefault();
+        setCookieConsent('granted');
+      });
+    }
+
+    if (declineBtn) {
+      declineBtn.addEventListener('click', (e) => {
+        if (e) e.preventDefault();
+        setCookieConsent('denied');
+      });
+    }
+
+    if (preferencesBtn) {
+      preferencesBtn.addEventListener('click', (e) => {
+        if (e) e.preventDefault();
+        showCookieBanner();
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
@@ -492,6 +597,10 @@
     setLanguage,
     getLanguage,
     applyLanguage,
+    getCookieConsent,
+    setCookieConsent,
+    showCookieBanner,
+    hideCookieBanner,
     TRANSLATIONS
   };
 
