@@ -12,6 +12,7 @@ package.json
 *.map
 .agents/
 .superpowers/
+.worktrees/
 
 # Secrets and environment configs
 .env
