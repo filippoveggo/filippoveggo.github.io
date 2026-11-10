@@ -28,6 +28,16 @@ Il sito web è stato progettato adottando l'estetica **Apple Liquid Glass** (*Gl
 * 📱 **Navigazione Dual-Mode Completamente Responsive:**
   * **Desktop:** Navbar fluttuante Liquid Glass pill ancorata in alto con scroll-elevation.
   * **Mobile (< 640px):** Floating TabBar in stile iOS posizionata in basso, ergonomica per il pollice e compatibile con le safe-areas dell'iPhone.
+* 🌓 **Tema Chiaro / Scuro Dinamico (Light & Dark Mode):**
+  * Supporto completo per tema Scuro profondo (`#070913`, default) e tema Chiaro Apple frosted (`#f5f5f7`).
+  * Palette adattiva con superfici satinate ad alto contrasto (WCAG AA compliant), riflessi speculari calibrati e sfondi dinamici fluidi.
+  * Rilevamento automatico della preferenza di sistema (`prefers-color-scheme`), persistenza in `localStorage` e script inline anti-FOUC in `<head>`.
+  * Toggle con icone Sole / Luna integrato sia nella pill bar desktop che nella TabBar iOS mobile.
+* 🌐 **Internazionalizzazione Istantanea (English & Italiano):**
+  * Motore di traduzione bilingue client-side leggero in vanilla JavaScript senza ricaricamento pagina.
+  * Copertura i18n completa con attributi `data-i18n` in tutti i layout (Home, Progetti, About, Case Studies, Header e Footer).
+  * Rilevamento locale automatico del browser (`navigator.language`) e memorizzazione della scelta dell'utente in `localStorage`.
+  * Controlli rapidi dedicati `IT` / `EN` in navigazione desktop e mobile.
 
 ---
 
