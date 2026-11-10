@@ -4,10 +4,10 @@
     <nav class="breadcrumb-nav" aria-label="Breadcrumb">
       <a href="{{ "/" | relative_url }}" class="breadcrumb-item">
         <i class="fa-solid fa-arrow-left"></i>
-        <span>Home</span>
+        <span data-i18n="about.breadcrumb.home">Home</span>
       </a>
       <span class="breadcrumb-separator">/</span>
-      <span class="breadcrumb-current">About Me</span>
+      <span class="breadcrumb-current" data-i18n="about.breadcrumb.about">About Me</span>
     </nav>
 
     <div class="about-hero-identity">
@@ -15,8 +15,8 @@
         <span class="avatar-initials">FV</span>
       </div>
       <div class="identity-text">
-        <h1 class="hero-title">{{ page.headTitle | default: "About Me" }}</h1>
-        <p class="hero-tagline">
+        <h1 class="hero-title" data-i18n="about.title.whoiam">{{ page.headTitle | default: "About Me" }}</h1>
+        <p class="hero-tagline" data-i18n="about.hero.tagline">
           Front-End Developer, Flutter enthusiast & UI/UX designer focused on building fluid, accessible, and delightful digital interfaces.
         </p>
       </div>
