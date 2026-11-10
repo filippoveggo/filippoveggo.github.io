@@ -62,6 +62,86 @@
 }
 
 /* ==========================================================================
+   Apple Liquid Glass Light Theme Tokens
+   ========================================================================== */
+:root[data-theme="light"],
+html[data-theme="light"] {
+  /* Surface Colors */
+  --bg-deep: #f5f5f7;
+  --bg-spatial: #ffffff;
+  --glass-surface: rgba(255, 255, 255, 0.72);
+  --glass-surface-hover: rgba(255, 255, 255, 0.88);
+  --glass-surface-active: rgba(255, 255, 255, 0.95);
+  --glass-nav-bg: rgba(245, 245, 247, 0.82);
+  --glass-nav-scrolled: rgba(255, 255, 255, 0.92);
+
+  /* Glass Reflections & Borders */
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-border-subtle: rgba(0, 0, 0, 0.04);
+  --glass-border-hover: rgba(0, 0, 0, 0.16);
+  --glass-border-active: rgba(0, 0, 0, 0.28);
+  --glass-specular-top: inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+  --glass-specular-bottom: inset 0 -1px 1px 0 rgba(0, 0, 0, 0.04);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 16px 40px -10px rgba(0, 0, 0, 0.09);
+  --shadow-lg: 0 28px 64px -12px rgba(0, 0, 0, 0.13);
+  --shadow-glow: 0 0 35px rgba(0, 113, 227, 0.15);
+
+  /* Typography Colors (WCAG Compliant Contrast) */
+  --text-primary: #1d1d1f;
+  --text-secondary: #424245;
+  --text-tertiary: #6e6e73;
+  --text-muted: #86868b;
+
+  /* Apple Signature Accent Colors (Tuned for light backgrounds) */
+  --accent-blue: #0071e3;
+  --accent-blue-hover: #0077ed;
+  --accent-purple: #9b39d1;
+  --accent-pink: #e0284f;
+  --accent-green: #248a3d;
+  --accent-orange: #d77600;
+  --accent-indigo: #4a48c6;
+}
+
+/* Light Theme Overrides for Ambient Aurora & Scrollbar */
+html[data-theme="light"] .ambient-aurora {
+  background: radial-gradient(circle at 50% 0%, #e6effa 0%, #f5f5f7 75%);
+  opacity: 0.6;
+}
+
+html[data-theme="light"] .aurora-orb {
+  filter: blur(80px);
+  opacity: 0.25;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f5f5f7;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border: 2px solid #f5f5f7;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="light"] .glass-card {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+html[data-theme="light"] .glass-sheen {
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+    rgba(255, 255, 255, 0.7),
+    transparent 40%
+  );
+}
+
+/* ==========================================================================
    Global Resets & Base Typography
    ========================================================================== */
 html {
