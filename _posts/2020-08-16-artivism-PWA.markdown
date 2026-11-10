@@ -1,9 +1,11 @@
 ---
 layout: post
 title:  "Artivism PWA"
-description: Front-end Progressive Web App for an art blockchain platform
+description: Front-end progressive web app for an artistic blockchain exhibition platform
 date:   2020-08-16 +0530
 categories: HTML CSS JQuery PWA
+bento_type: "mobile"
+bento_tag: "Web3 PWA"
 ---
 
 Creation of the front-end interface and mobile-first experience of an art blockchain platform.

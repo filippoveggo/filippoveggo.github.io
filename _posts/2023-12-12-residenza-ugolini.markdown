@@ -1,9 +1,12 @@
 ---
 layout: post
 title:  "Residenza Ugolini"
-description: Residenza Ugolini's Website
+description: Luxury boutique hospitality web platform with interactive floorplans and reservation workflows
 date:   2023-12-12 +0530
-categories: HTML Css
+categories: HTML CSS Architecture
+bento_span: "2x1"
+bento_type: "web"
+bento_tag: "Client Work"
 ---
 
 On behalf of an architecture firm in Padua, I have been commissioned to create and deploy a website for publishing their apartments in a residential complex. 
